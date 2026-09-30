@@ -1,0 +1,66 @@
+[
+  {
+    "file": "hero-burger.jpg",
+    "source": "https://www.pexels.com/photo/cheeseburger-on-black-background-18713429/",
+    "image": "https://images.pexels.com/photos/18713429/pexels-photo-18713429.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Jonathan Borba",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "burger-closeup.jpg",
+    "source": "https://www.pexels.com/photo/close-up-of-a-hamburger-on-black-background-12034622/",
+    "image": "https://images.pexels.com/photos/12034622/pexels-photo-12034622.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Israel Albornoz",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "gaming-purple.jpg",
+    "source": "https://www.pexels.com/photo/man-playing-computer-game-7915228/",
+    "image": "https://images.pexels.com/photos/7915228/pexels-photo-7915228.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "RDNE Stock project",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "creamy-pasta.jpg",
+    "source": "https://www.pexels.com/photo/food-photography-of-pasta-1438672/",
+    "image": "https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Engin Akyurt",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "french-toast.jpg",
+    "source": "https://www.pexels.com/photo/delicious-french-toast-with-fresh-berries-30900623/",
+    "image": "https://images.pexels.com/photos/30900623/pexels-photo-30900623.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Stephen Leonardi",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "sizzling-brownie.jpg",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-an-ice-cream-on-the-table-11485219/",
+    "image": "https://images.pexels.com/photos/11485219/pexels-photo-11485219.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Rahul Sapra",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "chocolate-milkshake.jpg",
+    "source": "https://www.pexels.com/photo/dessert-in-a-glass-16825489/",
+    "image": "https://images.pexels.com/photos/16825489/pexels-photo-16825489.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Dextar Studio",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "cafe-interior.jpg",
+    "source": "https://www.pexels.com/photo/cozy-cafe-interior-with-wooden-furnishings-31365006/",
+    "image": "https://images.pexels.com/photos/31365006/pexels-photo-31365006.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "author": "Rumeysa Demir",
+    "usage": "Illustrative stock photo, not actual DXB Cafe",
+    "license": "https://www.pexels.com/license/"
+  }
+]
