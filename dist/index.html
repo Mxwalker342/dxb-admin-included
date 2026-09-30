@@ -1,57 +1,402 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#111110">
-  <title>DXB Cafe カフェ — Eat. Play. Chill.</title>
-  <meta name="description" content="Big burgers. Bold flavors. Good company. Explore the DXB Cafe menu, discover the Gaming Zone, and plan your next hangout.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111110'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-size='33' font-weight='900' fill='%23f58b36'%3EDX%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7bf35">
+  <title>dxb — One Byte. Zero Regrets.</title>
+  <meta name="description" content="dxb Cafe. Crispy edges, melty cheese, soft buns. Loaded burgers, refreshing drinks, and gaming zone in Nalanchira, Trivandrum.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f7bf35'/%3E%3Cpath d='M13 29a19 19 0 0 1 38 0M13 37h38M14 45h36' fill='none' stroke='%23221c14' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+  <script src="/arcade-game.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="loader" aria-hidden="true"><span>DXB<small>カフェ</small></span></div>
-  <header class="site-header"><a class="brand" href="#home" aria-label="DXB Cafe home">DXB<span lang="ja">カフェ</span></a><nav aria-label="Main navigation" id="navigation"><a href="#home" class="active">Home</a><a href="#menu">Menu</a><a href="#gaming">Gaming Zone</a><a href="#gallery">Gallery</a><a href="#about">About</a></nav><a class="button small header-visit" href="#visit">Visit us </a><button class="menu-toggle" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false"><span></span><span></span></button></header>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topline">SMASHED FRESH. STACKED HIGH. ALWAYS A GOOD TIME.</div>
+
+  <header class="header site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="DXB home">
+        DXB<span class="brand-kanji" lang="ja">カフェ</span><span class="brand-dot">®</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation" id="navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#favourites">Favourites</a>
+        <a href="#menu">The menu</a>
+        <a href="#about">Our story</a>
+        <a href="#gaming">Gaming zone</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="nav-cta" href="#menu">Find your favorite <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
   <main id="main">
-    <section id="home" class="hero">
-      <div class="hero-image"><img src="/assets/burger.jpg" alt="Juicy burger with melted cheese and fresh toppings" fetchpriority="high" width="1400" height="1100"></div>
-      <div class="hero-copy"><p class="eyebrow"><span class="tiny-star">✳</span> BIG BITES. BETTER VIBES.</p><h1 class="hero-logo">DXB<span lang="ja">カフェ</span></h1><h2>JUICY. FRESH.<br>& FULL OF <em>FLAVOR!</em></h2><p class="hero-description">Loaded burgers. Next-level desserts.<br>Your new favourite place to eat, play & hang out.</p><div class="hero-actions"><a class="button" href="#menu">Explore menu </a><a class="text-link" href="#gaming">Discover the gaming zone </a></div></div>
-      <div class="round-stamp" aria-label="Eat play chill"><span>EAT • PLAY</span><b>✳</b><span>CHILL • REPEAT</span></div>
-      <div class="hero-bottom"><span>A LITTLE HUNGER. A LOT OF POSSIBILITIES.</span><a href="#favourites">SCROLL TO GET HUNGRY <span>↓</span></a></div>
+    <!-- Hero Section with Bun-Club Style & 3D Interactive Tilt Burger -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> SMALL BATCH. BIG BURGER ENERGY.</div>
+        <h1 id="hero-title">ONE BYTE.<br>ZERO <span class="outline">REGRETS.</span></h1>
+        <p>Crispy edges. Melty cheese. Zero shortcuts.<br>Loaded burgers, refreshing drinks, and your new favorite hangout.</p>
+        <div class="hero-cta-group">
+          <a href="#menu" class="button">Meet the burgers <span aria-hidden="true">↗</span></a>
+          <a href="#gaming" class="button button-outline">Gaming zone <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note">
+          <span class="spark" aria-hidden="true">✳</span>
+          <span>A little messy.<br><strong>A lot to love.</strong></span>
+        </div>
+      </div>
+
+      <div class="hero-art" id="burger-scene">
+        <div class="orbit" aria-hidden="true"></div>
+        <div class="burger-stage">
+          <img id="hero-burger" src="/burger.png" alt="Double smash burger with a golden sesame bun, melted cheddar, fresh lettuce and pickles" width="1536" height="1536" fetchpriority="high">
+        </div>
+        <div class="round-stamp">
+          <span>100%</span>
+          <strong>GOOD<br>STUFF</strong>
+          <span>ZERO SHORTCUTS</span>
+        </div>
+        <div class="burger-label">
+          <span>SIGNATURE SMASH BURGER</span>
+          <strong>Xtreme Boss Burger <i>↗</i></strong>
+        </div>
+        <span class="tiny-cross" aria-hidden="true">✦</span>
+      </div>
+
+      <div class="hero-bottom">
+        <span>BUILT FOR YOUR HAPPY PLACE.</span>
+        <a href="#favourites">KEEP IT SCROLLING <span aria-hidden="true">↓</span></a>
+        <span>EST. 2026 &nbsp; / &nbsp; ALWAYS FRESH</span>
+      </div>
     </section>
-    <div class="ticker" aria-hidden="true"><div>SMASHED TO PERFECTION <span>✳</span> GOOD FOOD. GREAT VIBES. <span>✳</span> EAT. PLAY. CHILL. <span>✳</span> SMASHED TO PERFECTION <span>✳</span> GOOD FOOD. GREAT VIBES. <span>✳</span> EAT. PLAY. CHILL. <span>✳</span></div></div>
-    <section id="favourites" class="section favourites">
-      <div class="section-top reveal"><div><p class="eyebrow orange">01 / THE CROWD FAVOURITES</p><h2>BIG ON FLAVOUR.<br><span class="outline">ZERO COMPROMISE.</span></h2></div><div class="section-aside"><p>The ones you'll come back for.<br>Meet your next obsession.</p><div class="carousel-controls"><button id="previous-food" aria-label="Previous best sellers">←</button><button id="next-food" aria-label="Next best sellers">→</button></div></div></div>
+
+    <!-- Marquee Ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div>
+        GOOD FOOD <span>✳</span> GOOD MOOD <span>✳</span> BETTER BURGERS <span>✳</span> SMASHED FRESH <span>✳</span> EAT. PLAY. CHILL. <span>✳</span>
+        GOOD FOOD <span>✳</span> GOOD MOOD <span>✳</span> BETTER BURGERS <span>✳</span> SMASHED FRESH <span>✳</span> EAT. PLAY. CHILL. <span>✳</span>
+      </div>
+    </div>
+
+    <!-- 01: Crowd Favourites / Best Sellers Carousel -->
+    <section class="favourites section" id="favourites" aria-labelledby="fav-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> 01 / THE CROWD FAVOURITES</div>
+          <h2 id="fav-title">BIG ON FLAVOUR.<br><span class="outline">ZERO COMPROMISE.</span></h2>
+        </div>
+        <div class="section-aside">
+          <p>The ones you'll come back for.<br>Meet your next obsession.</p>
+          <div class="carousel-controls">
+            <button id="previous-food" aria-label="Previous best sellers">←</button>
+            <button id="next-food" aria-label="Next best sellers">→</button>
+          </div>
+        </div>
+      </div>
       <div id="featured-track" class="featured-track" aria-label="Best sellers"></div>
-      <div class="section-foot"><p>BIG APPETITES WELCOME.</p><a href="#menu" class="text-link">Explore the full menu</a></div>
+      <div class="section-foot">
+        <p>BIG APPETITES WELCOME.</p>
+        <a href="#menu" class="text-link">Explore the full menu <span aria-hidden="true">↗</span></a>
+      </div>
     </section>
-    <section id="menu" class="section menu-section">
-      <div class="section-top reveal"><div><p class="eyebrow orange">02 / PICK YOUR CRAVING</p><h2>SOMETHING FOR<br><em>EVERY MOOD.</em></h2></div><p class="section-aside">From the first sip to the last bite.<br>Find your kind of happy.</p></div>
+
+    <!-- 02: Menu Section -->
+    <section class="menu section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> 02 / THE LINEUP</div>
+          <h2 id="menu-title">PICK YOUR<br><span>HAPPY PLACE.</span></h2>
+        </div>
+        <p class="section-aside">From the first bite to the last sip.<br>Find your kind of happy.</p>
+      </div>
+
       <div id="menu-tabs" class="menu-tabs" role="tablist" aria-label="Menu categories"></div>
-      <div class="menu-panel" id="menu-panel" role="tabpanel" aria-labelledby="tab-burgers" tabindex="0"><div class="menu-editorial"><img id="category-image" src="/assets/burger-closeup.jpg" alt="Illustrative burger photography" loading="lazy" width="800" height="1100"><div><span id="category-kicker">SMASHED. STACKED. LOADED.</span><h3 id="category-title">THE BURGER<br>LINEUP.</h3></div><span class="editorial-number" id="category-number">01</span></div><div class="menu-content"><div class="menu-meta"><p id="menu-count" aria-live="polite"></p><div id="burger-filters" class="burger-filters" aria-label="Burger type"><button class="selected" data-filter="all" aria-pressed="true">All</button><button data-filter="chicken" aria-pressed="false">Chicken</button><button data-filter="beef" aria-pressed="false">Beef</button></div></div><div id="menu-items" class="menu-items"></div><button id="show-menu" class="show-menu">View full category</button></div></div>
-      <p class="menu-note">Prices in Indian rupees. Please speak to our team about ingredients and allergens. Food photography is illustrative; presentation may vary.</p>
+
+      <div class="menu-panel" id="menu-panel" role="tabpanel" aria-labelledby="tab-burgers" tabindex="0">
+        <div class="menu-editorial">
+          <img id="category-image" src="/assets/burger-closeup.jpg" alt="Illustrative burger photography" loading="lazy" width="800" height="1100">
+          <div class="editorial-copy">
+            <span id="category-kicker">SMASHED. STACKED. LOADED.</span>
+            <h3 id="category-title">THE BURGER<br>LINEUP.</h3>
+          </div>
+          <span class="editorial-number" id="category-number">01</span>
+        </div>
+
+        <div class="menu-content">
+          <div class="menu-meta">
+            <p id="menu-count" aria-live="polite"></p>
+            <div id="burger-filters" class="burger-filters" aria-label="Burger type">
+              <button class="selected" data-filter="all" aria-pressed="true">All</button>
+              <button data-filter="chicken" aria-pressed="false">Chicken</button>
+              <button data-filter="beef" aria-pressed="false">Beef</button>
+            </div>
+          </div>
+          <div id="menu-items" class="menu-grid-items"></div>
+          <button id="show-menu" class="button-outline show-more-btn">View full category</button>
+        </div>
+      </div>
+
+      <p class="menu-footnote">Made fresh, every single time. Prices in Indian rupees. Ask about ingredients and allergens before ordering.</p>
     </section>
-    <section id="about" class="section about-section">
-      <div class="about-visual reveal"><img src="/assets/dxb-drink.jpg" alt="A refreshing drink inside DXB Cafe, with its neon wall art" loading="lazy" width="1000" height="1100"><div class="about-stamp">GOOD FOOD<br>GOOD PEOPLE<br><em>GREAT TIMES.</em></div><span class="image-label">THE DXB STATE OF MIND</span></div>
-      <div class="about-copy reveal"><p class="eyebrow orange">03 / MORE THAN A CAFE</p><h2>COME FOR<br>THE FOOD.<br><span class="outline">STAY FOR</span><br><em>THE VIBE.</em></h2><p>A modern cafe experience built around loaded burgers, bold flavours, refreshing drinks and indulgent desserts.</p><p>But the best part? The people you share it with. A quick coffee, a long catch-up, or one more game with your crew — there's a place for it at DXB.</p><a class="text-link" href="#visit">Make yourself at home</a><span class="about-japanese" lang="ja" aria-label="Cafe">カフェ</span></div>
+
+    <!-- 03: Story / About Section (Bun-Club Orange Theme) -->
+    <section class="story section" id="about" aria-labelledby="story-title">
+      <div class="eyebrow"><span></span> 03 / WELCOME TO THE CLUB</div>
+      <div class="story-content">
+        <h2 id="story-title">NO SECRET<br>HANDSHAKE.<br>JUST <em>GOOD FOOD.</em></h2>
+        <div>
+          <span class="story-star" aria-hidden="true">✳</span>
+          <p>We're here for the first bite, the extra napkins, and the friends who always steal your fries.</p>
+          <p>So we keep it simple: fresh ingredients, smashed patties made with care, refreshing milkshakes, and the kind of food that makes a regular day a really good one.</p>
+          <p>And when you're done eating? Head upstairs to the Gaming Zone for one more round with your squad.</p>
+          <a href="#visit" class="text-link story-link">There's a seat with your name on it <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
-    <section id="gaming" class="gaming-section">
-      <div class="gaming-glow" aria-hidden="true"></div><div class="gaming-grid" aria-hidden="true"></div>
-      <div class="gaming-top"><p class="eyebrow">04 / THE OTHER SIDE OF DXB</p><span class="gaming-tag">PLAYER ONE, YOU'RE HOME.</span></div>
-      <div class="gaming-layout"><div class="gaming-copy reveal"><span class="gaming-brand">DXB</span><h2>GAMING<br><span>ZONE.</span></h2><p class="gaming-motto">EAT. <span>PLAY.</span> CHILL.</p><p>Big plays. Bigger bites. Bring your crew, grab your favourites, and settle into your next session.</p><a class="button gaming-button" href="#gaming-details">Enter the gaming zone <span>⊕</span></a></div><div class="gaming-photo reveal"><img src="/assets/dxb-gaming.jpg" alt="Friends playing console games at the actual DXB Cafe gaming zone" loading="lazy" width="1400" height="1000"><span class="gaming-photo-label">THE GAME DOESN'T END AT THE LAST BITE.</span><span class="gaming-cross" aria-hidden="true">+</span></div></div>
-      <div id="gaming-details" class="gaming-features"><div class="reveal"><span class="feature-icon">▣</span><span class="feature-index">01</span><h3>GAMING SETUPS</h3><p>Get in the zone.</p></div><div class="reveal"><span class="feature-icon">⌘</span><span class="feature-index">02</span><h3>MULTIPLAYER</h3><p>Squad up. Play together.</p></div><div class="reveal"><span class="feature-icon">✳</span><span class="feature-index">03</span><h3>FOOD & DRINKS</h3><p>Fuel for the next round.</p></div><div class="reveal"><span class="feature-icon">◈</span><span class="feature-index">04</span><h3>CHILL SPACE</h3><p>Hang out between games.</p></div></div>
-      <div class="gaming-bottom"><span>YOUR CREW. YOUR CORNER. YOUR NEXT LEVEL.</span><a href="tel:+919656110056" class="text-link">Call for gaming availability</a></div>
-      <div class="gaming-gallery" id="gaming-gallery"><button class="gallery-item" data-photo="/assets/dxb-gaming.jpg" data-caption="The actual DXB Gaming Zone — from our Google Maps gallery"><img src="/assets/dxb-gaming.jpg" loading="lazy" width="1200" height="700" alt="Friends gaming at DXB Cafe"><span>GET IN THE GAME <b>+</b></span></button><button class="gallery-item" data-photo="/assets/chocolate-milkshake.jpg" data-caption="Something sweet between rounds — illustrative photography"><img src="/assets/chocolate-milkshake.jpg" loading="lazy" width="800" height="1000" alt="Chocolate shake, illustrative photography"><span>FUEL YOUR SESSION <b>+</b></span></button></div><p class="photo-note">The real DXB Gaming Zone. Catch more moments on <a href="https://www.instagram.com/__d___x___b__/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
+
+    <!-- 04: Gaming Zone Section (Retro Arcade Ink Theme) -->
+    <section class="gaming-section" id="gaming" aria-labelledby="gaming-title">
+      <div class="gaming-glow" aria-hidden="true"></div>
+      <div class="gaming-grid" aria-hidden="true"></div>
+      <div class="gaming-top">
+        <div class="eyebrow yellow"><span></span> 04 / THE OTHER SIDE OF DXB</div>
+        <span class="gaming-tag">PLAYER ONE, YOU'RE HOME.</span>
+      </div>
+
+      <div class="gaming-layout">
+        <div class="gaming-copy reveal">
+          <span class="gaming-brand">DXB</span>
+          <h2 id="gaming-title">GAMING<br><span class="outline-yellow">ZONE.</span></h2>
+          <p class="gaming-motto">EAT. <span>PLAY.</span> CHILL.</p>
+          <p>Big plays. Bigger bites. Bring your crew, grab your favourites, and settle into your next session.</p>
+          <div class="gaming-cta-row">
+            <a class="button button-yellow" href="#dxb-arcade-station">Play Arcade Mini Game</a>
+            <a class="button button-outline-light" href="#gaming-details">Zone Setups <span aria-hidden="true">⊕</span></a>
+          </div>
+        </div>
+        <div class="gaming-photo reveal">
+          <img src="/assets/dxb-gaming.jpg" alt="Friends playing console games at the actual DXB Cafe gaming zone" loading="lazy" width="1400" height="1000">
+          <span class="gaming-photo-label">THE GAME DOESN'T END AT THE LAST BITE.</span>
+          <span class="gaming-cross" aria-hidden="true">+</span>
+        </div>
+      </div>
+
+      <!-- DXB RETRO ARCADE CABINET STATION -->
+      <div id="dxb-arcade-station" class="arcade-station reveal">
+        <div class="arcade-cabinet-frame">
+          <!-- Marquee Header -->
+          <div class="arcade-marquee">
+            <div class="marquee-chase-lights" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="marquee-title-box">
+              <h3 class="arcade-title">DXB BURGER BLITZ</h3>
+              <span class="arcade-subtitle">★ OFFICIAL DXB GAMING ZONE MINI-GAME ★</span>
+            </div>
+            <div class="marquee-chase-lights" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <!-- Screen Surround / CRT Frame -->
+          <!-- Screen Surround Frame -->
+          <div class="arcade-screen-housing">
+            <!-- Simple Header: SCORE, TOTAL SCORE, SOUND -->
+            <div class="arcade-simple-header">
+              <div class="arcade-stat-box">
+                <span class="arcade-stat-label">SCORE</span>
+                <span id="arcade-current-score" class="arcade-stat-val">000000</span>
+              </div>
+              <div class="arcade-stat-box">
+                <span class="arcade-stat-label">TOTAL SCORE</span>
+                <span id="arcade-top-score" class="arcade-stat-val">000850</span>
+              </div>
+              <button id="arcade-sound-btn" class="arcade-sound-btn" type="button" aria-label="Toggle Sound">
+                🔊 SOUND: ON
+              </button>
+            </div>
+
+            <!-- Game Canvas Container -->
+            <div class="arcade-canvas-wrap" id="arcade-canvas-wrap">
+              <canvas id="dxb-arcade-canvas" width="800" height="520" aria-label="DXB Burger Blitz retro arcade mini game"></canvas>
+            </div>
+
+            <!-- Simple Controls: Only 2 Buttons (LEFT & RIGHT) -->
+            <div class="arcade-simple-controls">
+              <button id="btn-left" class="arcade-btn-big" type="button" aria-label="Move Left">
+                <span class="btn-arrow">◀</span>
+                <span class="btn-text">LEFT</span>
+              </button>
+              <button id="btn-right" class="arcade-btn-big" type="button" aria-label="Move Right">
+                <span class="btn-text">RIGHT</span>
+                <span class="btn-arrow">▶</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="gaming-details" class="gaming-features">
+        <div class="reveal">
+          <span class="feature-icon">▣</span>
+          <span class="feature-index">01</span>
+          <h3>GAMING SETUPS</h3>
+          <p>Get in the zone with high-end console rigs.</p>
+        </div>
+        <div class="reveal">
+          <span class="feature-icon">⌘</span>
+          <span class="feature-index">02</span>
+          <h3>MULTIPLAYER</h3>
+          <p>Squad up and battle it out together.</p>
+        </div>
+        <div class="reveal">
+          <span class="feature-icon">✳</span>
+          <span class="feature-index">03</span>
+          <h3>FOOD & DRINKS</h3>
+          <p>Burgers and shakes delivered to your station.</p>
+        </div>
+        <div class="reveal">
+          <span class="feature-icon">◈</span>
+          <span class="feature-index">04</span>
+          <h3>CHILL SPACE</h3>
+          <p>Lounge with your squad between rounds.</p>
+        </div>
+      </div>
+
+      <div class="gaming-bottom">
+        <span>YOUR CREW. YOUR CORNER. YOUR NEXT LEVEL.</span>
+        <a href="tel:+919656110056" class="text-link">Call for gaming availability <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="gaming-gallery" id="gaming-gallery">
+        <button class="gallery-item" data-photo="/assets/dxb-gaming.jpg" data-caption="The actual DXB Gaming Zone — console action and good times">
+          <img src="/assets/dxb-gaming.jpg" loading="lazy" width="1200" height="700" alt="Friends gaming at DXB Cafe">
+          <span>GET IN THE GAME <b>+</b></span>
+        </button>
+        <button class="gallery-item" data-photo="/assets/chocolate-milkshake.jpg" data-caption="Something sweet between rounds — chocolate shake">
+          <img src="/assets/chocolate-milkshake.jpg" loading="lazy" width="800" height="1000" alt="Chocolate shake">
+          <span>FUEL YOUR SESSION <b>+</b></span>
+        </button>
+      </div>
+      <p class="photo-note">The real DXB Gaming Zone. Catch more moments on <a href="https://www.instagram.com/__d___x___b__/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
     </section>
-    <section id="gallery" class="section gallery-section">
-      <div class="section-top reveal"><div><p class="eyebrow orange">05 / A TASTE OF THE GOOD LIFE</p><h2>LESS SCROLLING.<br><em>MORE LIVING.</em></h2></div><a class="text-link" href="https://www.instagram.com/__d___x___b__/" target="_blank" rel="noopener noreferrer">Follow DXB on Instagram</a></div>
-      <div class="gallery-grid"><button class="gallery-item gallery-tall reveal" data-photo="/assets/dxb-burger.jpg" data-caption="Burgers at DXB Cafe — photo by Asher philip, via Google Maps"><img src="/assets/dxb-burger.jpg" alt="Burger and fries served at DXB Cafe" loading="lazy" width="800" height="1200"><span>BIG BITE ENERGY <b>+</b></span></button><button class="gallery-item reveal" data-photo="/assets/dxb-chocolate-dessert.jpg" data-caption="The sweet side of DXB — from our Google Maps gallery"><img src="/assets/dxb-chocolate-dessert.jpg" alt="Chocolate dessert served at DXB Cafe" loading="lazy" width="800" height="700"><span>THE SWEET SIDE <b>+</b></span></button><button class="gallery-item reveal" data-photo="/assets/dxb-drink.jpg" data-caption="The actual DXB Cafe — neon lights and good vibes"><img src="/assets/dxb-drink.jpg" alt="DXB Cafe neon interior and refreshing drink" loading="lazy" width="800" height="700"><span>STAY A LITTLE LONGER <b>+</b></span></button><button class="gallery-item reveal" data-photo="/assets/chocolate-milkshake.jpg" data-caption="Sip. Chill. Repeat. — illustrative photography"><img src="/assets/chocolate-milkshake.jpg" alt="Indulgent chocolate milkshake" loading="lazy" width="800" height="700"><span>SIP. CHILL. REPEAT. <b>+</b></span></button><button class="gallery-item reveal" data-photo="/assets/creamy-pasta.jpg" data-caption="Comfort in every bite — illustrative photography"><img src="/assets/creamy-pasta.jpg" alt="Freshly served pasta" loading="lazy" width="800" height="700"><span>COMFORT IN EVERY BITE <b>+</b></span></button></div><p class="photo-note">Real DXB moments from our Google Maps gallery, alongside illustrative food photography.</p>
+
+    <!-- 05: Photo Gallery Section -->
+    <section class="gallery-section section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> 05 / A TASTE OF THE GOOD LIFE</div>
+          <h2 id="gallery-title">LESS SCROLLING.<br><span>MORE LIVING.</span></h2>
+        </div>
+        <a class="text-link" href="https://www.instagram.com/__d___x___b__/" target="_blank" rel="noopener noreferrer">Follow DXB on Instagram <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-tall reveal" data-photo="/assets/dxb-burger.jpg" data-caption="Burgers and fries served at DXB Cafe Nalanchira">
+          <img src="/assets/dxb-burger.jpg" alt="Burger and fries served at DXB Cafe" loading="lazy" width="800" height="1200">
+          <span>BIG BITE ENERGY <b>+</b></span>
+        </button>
+        <button class="gallery-item reveal" data-photo="/assets/dxb-chocolate-dessert.jpg" data-caption="The sweet side of DXB — Gyptian chocolate indulgence">
+          <img src="/assets/dxb-chocolate-dessert.jpg" alt="Chocolate dessert served at DXB Cafe" loading="lazy" width="800" height="700">
+          <span>THE SWEET SIDE <b>+</b></span>
+        </button>
+        <button class="gallery-item reveal" data-photo="/assets/dxb-drink.jpg" data-caption="The actual DXB Cafe — neon lights and good vibes">
+          <img src="/assets/dxb-drink.jpg" alt="DXB Cafe neon interior and refreshing drink" loading="lazy" width="800" height="700">
+          <span>STAY A LITTLE LONGER <b>+</b></span>
+        </button>
+        <button class="gallery-item reveal" data-photo="/assets/chocolate-milkshake.jpg" data-caption="Sip. Chill. Repeat. — delicious milkshake">
+          <img src="/assets/chocolate-milkshake.jpg" alt="Indulgent chocolate milkshake" loading="lazy" width="800" height="700">
+          <span>SIP. CHILL. REPEAT. <b>+</b></span>
+        </button>
+        <button class="gallery-item reveal" data-photo="/assets/creamy-pasta.jpg" data-caption="Comfort in every bite — freshly made pasta">
+          <img src="/assets/creamy-pasta.jpg" alt="Freshly served pasta" loading="lazy" width="800" height="700">
+          <span>COMFORT IN EVERY BITE <b>+</b></span>
+        </button>
+      </div>
+      <p class="photo-note">Real DXB moments from our gallery, alongside illustrative food photography.</p>
     </section>
-    <section id="visit" class="section visit-section"><div class="visit-copy reveal"><p class="eyebrow orange">06 / YOUR NEXT HANGOUT</p><h2>YOUR TABLE.<br><em>YOUR PEOPLE.</em></h2><p class="visit-intro">Good food tastes better together.<br>We'll see you at DXB.</p><div class="visit-details"><div><span>FIND US</span><p>Nalanchira, Thiruvananthapuram<br>Kerala 695015</p></div><div><span>DROP BY</span><p>Every day · 12:00 pm – 1:00 am</p><small>Holiday hours may vary.</small></div><div><span>SAY HELLO</span><a href="tel:+919656110056">+91 96561 10056</a></div></div><div class="visit-actions"><a class="button" href="https://www.google.com/maps/dir/?api=1&destination=8.5447045,76.9429927" target="_blank" rel="noopener noreferrer">Get directions </a><a class="button button-outline" href="tel:+919656110056">Call DXB</a><a class="text-link" href="https://wa.me/919656110056" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="visit-map reveal"><iframe title="DXB Cafe location in Nalanchira" src="https://maps.google.com/maps?q=8.5447045,76.9429927&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-caption"><div><b>DXB CAFE <span lang="ja">カフェ</span></b><p>Nalanchira, Thiruvananthapuram</p></div><a href="https://maps.app.goo.gl/ucX2HAV7JxYeBDLz7" target="_blank" rel="noopener noreferrer" aria-label="Open DXB Cafe in Google Maps">Google Maps</a></div></div></section>
-    <div class="closing-banner"><p>COME HUNGRY. <span>LEAVE HAPPY.</span> ✳</p></div>
+
+    <!-- 06: Visit / Location Section -->
+    <section class="visit-section section" id="visit" aria-labelledby="visit-title">
+      <div class="visit-copy reveal">
+        <div class="eyebrow"><span></span> 06 / YOUR NEXT HANGOUT</div>
+        <h2 id="visit-title">YOUR TABLE.<br><span>YOUR PEOPLE.</span></h2>
+        <p class="visit-intro">Good food tastes better together.<br>We'll see you at DXB.</p>
+        <div class="visit-details">
+          <div>
+            <span>FIND US</span>
+            <p>Nalanchira, Thiruvananthapuram<br>Kerala 695015</p>
+          </div>
+          <div>
+            <span>DROP BY</span>
+            <p>Every day · 12:00 pm – 1:00 am</p>
+            <small>Late night bites welcome.</small>
+          </div>
+          <div>
+            <span>SAY HELLO</span>
+            <a href="tel:+919656110056">+91 96561 10056</a>
+          </div>
+        </div>
+        <div class="visit-actions">
+          <a class="button" href="https://www.google.com/maps/dir/?api=1&destination=8.5447045,76.9429927" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="tel:+919656110056">Call DXB</a>
+          <a class="text-link" href="https://wa.me/919656110056" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="visit-map reveal">
+        <iframe title="DXB Cafe location in Nalanchira" src="https://maps.google.com/maps?q=8.5447045,76.9429927&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-caption">
+          <div>
+            <b>DXB CAFE <span class="brand-kanji">カフェ</span></b>
+            <p>Nalanchira, Thiruvananthapuram</p>
+          </div>
+          <a href="https://maps.app.goo.gl/ucX2HAV7JxYeBDLz7" target="_blank" rel="noopener noreferrer" aria-label="Open DXB Cafe in Google Maps">Google Maps ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Big Typography Banner -->
+    <div class="closing-banner">
+      <p>COME HUNGRY. <span>LEAVE HAPPY.</span> ✳</p>
+    </div>
   </main>
-  <footer><a class="footer-logo" href="#home">DXB<small lang="ja">カフェ</small></a><div class="footer-center"><p>JUICY. FRESH. & FULL OF FLAVOR!</p><nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#gaming">Gaming Zone</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#visit">Contact</a></nav><nav class="social-links" aria-label="Social links"><a href="https://www.instagram.com/__d___x___b__/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://wa.me/919656110056" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://maps.app.goo.gl/ucX2HAV7JxYeBDLz7" target="_blank" rel="noopener noreferrer">Google Maps</a></nav></div><a class="back-top" href="#home" aria-label="Back to top">↑</a><div class="footer-bottom"><span>© <span id="year">2026</span> DXB Cafe. All good vibes reserved.</span><span>EAT WELL. PLAY HARD. STAY A WHILE.</span></div></footer>
-  <dialog id="image-dialog" class="image-dialog"><button class="dialog-close" aria-label="Close image">×</button><img alt=""><p></p></dialog>
-</body></html>
+
+  <!-- Bun-Club Styled Footer -->
+  <footer>
+    <a class="brand" href="#home" aria-label="DXB home">
+      DXB<span class="brand-dot">®</span>
+    </a>
+    <div class="footer-center">
+      <span>ONE BYTE. ZERO REGRETS.</span>
+      <nav aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#favourites">Favourites</a>
+        <a href="#menu">The menu</a>
+        <a href="#about">Our story</a>
+        <a href="#gaming">Gaming zone</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+    <a class="back-top" href="#main" aria-label="Back to top">↑</a>
+    <small>© 2026 dxb cafe. All good vibes reserved. Smashed fresh, stacked high.</small>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <dialog id="image-dialog" class="image-dialog">
+    <button class="dialog-close" aria-label="Close image">×</button>
+    <img alt="">
+    <p></p>
+  </dialog>
+</body>
+</html>
