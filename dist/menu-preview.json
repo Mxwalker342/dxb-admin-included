@@ -1,0 +1,461 @@
+[
+  {
+    "id": "burgers-0-0",
+    "name": "Xtreme Boss Burger (beef)",
+    "category": "Burgers",
+    "description": "Double smash beef, crispy beef bacon, fried egg, signature glaze & melted cheese.",
+    "price": 381,
+    "available": true,
+    "sort_order": 0
+  },
+  {
+    "id": "burgers-1-0",
+    "name": "Drip Beast Burger (beef)",
+    "category": "Burgers",
+    "description": "Juicy smashed beef loaded with caramelized onions, liquid cheese drip & relish.",
+    "price": 376,
+    "available": true,
+    "sort_order": 1
+  },
+  {
+    "id": "burgers-2-0",
+    "name": "Dallas Smashed Burger (beef)",
+    "category": "Burgers",
+    "description": "Smoky Texas BBQ glaze, crispy onion rings and double American cheddar.",
+    "price": 264,
+    "available": true,
+    "sort_order": 2
+  },
+  {
+    "id": "burgers-3-0",
+    "name": "BBQ Smashed Burger (beef)",
+    "category": "Burgers",
+    "description": "Double grilled smash beef with sweet hickory smoke BBQ sauce.",
+    "price": 289,
+    "available": true,
+    "sort_order": 3
+  },
+  {
+    "id": "burgers-4-0",
+    "name": "Manhattan Melt Burger (beef)",
+    "category": "Burgers",
+    "description": "Classic NYC smash burger style, grilled onions, pickles and diner mustard sauce.",
+    "price": 199,
+    "available": true,
+    "sort_order": 4
+  },
+  {
+    "id": "burgers-5-0",
+    "name": "Gooey Burger (beef)",
+    "category": "Burgers",
+    "description": "Ultra-melty cheesy smash beef burger with house secret sauce and soft bun.",
+    "price": 189,
+    "available": true,
+    "sort_order": 5
+  },
+  {
+    "id": "burgers-6-0",
+    "name": "Beef Bacon Burger (beef)",
+    "category": "Burgers",
+    "description": "Smashed beef patty layered with premium crispy smoked beef bacon and melted cheese.",
+    "price": 342,
+    "available": true,
+    "sort_order": 6
+  },
+  {
+    "id": "burgers-7-0",
+    "name": "Xtreme Boss Burger (chicken)",
+    "category": "Burgers",
+    "description": "Crispy fried chicken fillet, beef bacon, melted cheese, egg and signature glaze.",
+    "price": 361,
+    "available": true,
+    "sort_order": 7
+  },
+  {
+    "id": "burgers-8-0",
+    "name": "Hexxa Burger (chicken)",
+    "category": "Burgers",
+    "description": "Crispy fried chicken stacked with signature sauce, fresh slaw and cheddar.",
+    "price": 359,
+    "available": true,
+    "sort_order": 8
+  },
+  {
+    "id": "burgers-9-0",
+    "name": "Ranch Burger (chicken)",
+    "category": "Burgers",
+    "description": "Buttermilk fried chicken, creamy herb ranch, dill pickles and crisp iceberg.",
+    "price": 314,
+    "available": true,
+    "sort_order": 9
+  },
+  {
+    "id": "burgers-10-0",
+    "name": "Grillzilla Burger (chicken)",
+    "category": "Burgers",
+    "description": "Flame-grilled juicy chicken fillet seasoned to perfection with melted cheese.",
+    "price": 220,
+    "available": true,
+    "sort_order": 10
+  },
+  {
+    "id": "burgers-11-0",
+    "name": "DXB Spicy (chicken)",
+    "category": "Burgers",
+    "description": "Crispy chicken infused with fiery spicy cayenne glaze and pickled jalapenos.",
+    "price": 198,
+    "available": true,
+    "sort_order": 11
+  },
+  {
+    "id": "burgers-12-0",
+    "name": "DXB Classic (chicken)",
+    "category": "Burgers",
+    "description": "The original golden bun, fresh leaf lettuce, juicy chicken patty and house spread.",
+    "price": 188,
+    "available": true,
+    "sort_order": 12
+  },
+  {
+    "id": "starters-0-0",
+    "name": "Fries — option 1",
+    "category": "Starters",
+    "description": "Crispy skin-on golden potato fries seasoned with sea salt.",
+    "price": 79,
+    "available": true,
+    "sort_order": 13
+  },
+  {
+    "id": "starters-0-1",
+    "name": "Fries — option 2",
+    "category": "Starters",
+    "description": "Crispy skin-on golden potato fries seasoned with sea salt.",
+    "price": 159,
+    "available": true,
+    "sort_order": 14
+  },
+  {
+    "id": "starters-0-2",
+    "name": "Fries — option 3",
+    "category": "Starters",
+    "description": "Crispy skin-on golden potato fries seasoned with sea salt.",
+    "price": 189,
+    "available": true,
+    "sort_order": 15
+  },
+  {
+    "id": "starters-1-0",
+    "name": "Piri Piri Fries — option 1",
+    "category": "Starters",
+    "description": "Tossed in signature tangy African birds eye piri piri dust.",
+    "price": 99,
+    "available": true,
+    "sort_order": 16
+  },
+  {
+    "id": "starters-1-1",
+    "name": "Piri Piri Fries — option 2",
+    "category": "Starters",
+    "description": "Tossed in signature tangy African birds eye piri piri dust.",
+    "price": 179,
+    "available": true,
+    "sort_order": 17
+  },
+  {
+    "id": "starters-1-2",
+    "name": "Piri Piri Fries — option 3",
+    "category": "Starters",
+    "description": "Tossed in signature tangy African birds eye piri piri dust.",
+    "price": 209,
+    "available": true,
+    "sort_order": 18
+  },
+  {
+    "id": "starters-2-0",
+    "name": "Loaded Fries",
+    "category": "Starters",
+    "description": "Topped with melted cheese, savory beef mince, jalapenos and house sauce.",
+    "price": 210,
+    "available": true,
+    "sort_order": 19
+  },
+  {
+    "id": "starters-3-0",
+    "name": "Chicken Fingers",
+    "category": "Starters",
+    "description": "Crispy golden tender chicken fingers served with dipping sauce.",
+    "price": 189,
+    "available": true,
+    "sort_order": 20
+  },
+  {
+    "id": "starters-4-0",
+    "name": "Chicken Nuggets",
+    "category": "Starters",
+    "description": "Golden bite-sized chicken nuggets crispy on the outside, tender inside.",
+    "price": 188,
+    "available": true,
+    "sort_order": 21
+  },
+  {
+    "id": "starters-5-0",
+    "name": "Mozzarella Sticks",
+    "category": "Starters",
+    "description": "Gooey melted mozzarella coated in seasoned herb breadcrumbs with marinara.",
+    "price": 210,
+    "available": true,
+    "sort_order": 22
+  },
+  {
+    "id": "starters-6-0",
+    "name": "Japanese Prawn Island",
+    "category": "Starters",
+    "description": "Crisp tempura-battered succulent prawns served with signature dip.",
+    "price": 248,
+    "available": true,
+    "sort_order": 23
+  },
+  {
+    "id": "starters-7-0",
+    "name": "Tokyo Street Chicken Wings",
+    "category": "Starters",
+    "description": "Crispy chicken wings glazed street-style with toasted sesame and scallions.",
+    "price": 189,
+    "available": true,
+    "sort_order": 24
+  },
+  {
+    "id": "starters-8-0",
+    "name": "Potato Wedges",
+    "category": "Starters",
+    "description": "Thick rustic seasoned potato wedges served golden and crispy.",
+    "price": 178,
+    "available": true,
+    "sort_order": 25
+  },
+  {
+    "id": "starters-9-0",
+    "name": "Piri Piri Potato Wedges",
+    "category": "Starters",
+    "description": "Crispy potato wedges tossed in zesty fiery piri piri seasoning.",
+    "price": 198,
+    "available": true,
+    "sort_order": 26
+  },
+  {
+    "id": "rice-pasta-0-0",
+    "name": "Heavenly Vision Bowl",
+    "category": "Rice & Pasta",
+    "description": "Aromatic seasoned butter rice served with grilled chicken, greens and garlic cream.",
+    "price": 299,
+    "available": true,
+    "sort_order": 27
+  },
+  {
+    "id": "rice-pasta-1-0",
+    "name": "Third Eye Awakening Bowl",
+    "category": "Rice & Pasta",
+    "description": "Bold spicy wok-tossed rice bowl with charred peppers and signature spices.",
+    "price": 319,
+    "available": true,
+    "sort_order": 28
+  },
+  {
+    "id": "rice-pasta-2-0",
+    "name": "Budha Rice Bowl",
+    "category": "Rice & Pasta",
+    "description": "Fresh greens, toasted sesame, pickled slaw and wholesome warm seasoned rice.",
+    "price": 289,
+    "available": true,
+    "sort_order": 29
+  },
+  {
+    "id": "rice-pasta-3-0",
+    "name": "Signature House Pasta",
+    "category": "Rice & Pasta",
+    "description": "Silky rich signature pasta tossed with fresh herbs, garlic parmesan cream and penne.",
+    "price": 276,
+    "available": true,
+    "sort_order": 30
+  },
+  {
+    "id": "rice-pasta-4-0",
+    "name": "Arrabbiata Pasta",
+    "category": "Rice & Pasta",
+    "description": "Rich roasted tomato sugo, chili flakes, fresh basil, garlic and tender penne.",
+    "price": 287,
+    "available": true,
+    "sort_order": 31
+  },
+  {
+    "id": "shakes-fizzy-0-0",
+    "name": "Caremal Shake",
+    "category": "Shakes & Fizzy",
+    "description": "Rich creamy milkshake infused with golden buttery caramel swirl.",
+    "price": 129,
+    "available": true,
+    "sort_order": 32
+  },
+  {
+    "id": "shakes-fizzy-1-0",
+    "name": "Chocolate Shake",
+    "category": "Shakes & Fizzy",
+    "description": "Decadent Dutch cocoa blended with velvety ice cream and dark chocolate drizzle.",
+    "price": 121,
+    "available": true,
+    "sort_order": 33
+  },
+  {
+    "id": "shakes-fizzy-2-0",
+    "name": "Taro Shake",
+    "category": "Shakes & Fizzy",
+    "description": "Creamy exotic purple taro root shake with a velvety, subtly sweet finish.",
+    "price": 139,
+    "available": true,
+    "sort_order": 34
+  },
+  {
+    "id": "shakes-fizzy-3-0",
+    "name": "Mojito",
+    "category": "Shakes & Fizzy",
+    "description": "Refreshing muddled fresh mint leaves, zesty lime and chilled sparkling soda.",
+    "price": 99,
+    "available": true,
+    "sort_order": 35
+  },
+  {
+    "id": "shakes-fizzy-4-0",
+    "name": "Cola",
+    "category": "Shakes & Fizzy",
+    "description": "Classic ice-cold carbonated cola poured over ice.",
+    "price": 49,
+    "available": true,
+    "sort_order": 36
+  },
+  {
+    "id": "shakes-fizzy-5-0",
+    "name": "Sprite",
+    "category": "Shakes & Fizzy",
+    "description": "Crisp, refreshing lemon-lime fizzy soda served ice cold.",
+    "price": 49,
+    "available": true,
+    "sort_order": 37
+  },
+  {
+    "id": "hot-cold-0-0",
+    "name": "Hazelnut Coffee",
+    "category": "Hot & Cold",
+    "description": "Freshly brewed hot coffee infused with toasted aromatic hazelnut notes.",
+    "price": 49,
+    "available": true,
+    "sort_order": 38
+  },
+  {
+    "id": "hot-cold-1-0",
+    "name": "Coffee",
+    "category": "Hot & Cold",
+    "description": "Classic hot brewed rich coffee, balanced and invigorating.",
+    "price": 30,
+    "available": true,
+    "sort_order": 39
+  },
+  {
+    "id": "hot-cold-2-0",
+    "name": "Iced Latte",
+    "category": "Hot & Cold",
+    "description": "Freshly pulled espresso poured over cold milk and crystalline ice.",
+    "price": 99,
+    "available": true,
+    "sort_order": 40
+  },
+  {
+    "id": "hot-cold-3-0",
+    "name": "Iced Matcha",
+    "category": "Hot & Cold",
+    "description": "Authentic stone-ground green tea matcha whisked smooth over chilled milk.",
+    "price": 139,
+    "available": true,
+    "sort_order": 41
+  },
+  {
+    "id": "hot-cold-4-0",
+    "name": "Iced Frapichino",
+    "category": "Hot & Cold",
+    "description": "Blended iced espresso frappe topped with chilled creamy froth.",
+    "price": 149,
+    "available": true,
+    "sort_order": 42
+  },
+  {
+    "id": "french-toast-0-0",
+    "name": "Blueberry Heaven",
+    "category": "French Toast",
+    "description": "Golden thick-cut brioche french toast drenched in wild blueberry compote.",
+    "price": 278,
+    "available": true,
+    "sort_order": 43
+  },
+  {
+    "id": "french-toast-1-0",
+    "name": "Caremal Fountain",
+    "category": "French Toast",
+    "description": "Buttery toasted brioche drizzled with overflowing warm amber caramel.",
+    "price": 249,
+    "available": true,
+    "sort_order": 44
+  },
+  {
+    "id": "french-toast-2-0",
+    "name": "Chocolate Overloaded",
+    "category": "French Toast",
+    "description": "Crispy golden toast drenched in warm melted Belgian chocolate and chocolate pearls.",
+    "price": 239,
+    "available": true,
+    "sort_order": 45
+  },
+  {
+    "id": "egyptian-desserts-0-0",
+    "name": "Dubai Chocolate",
+    "category": "Egyptian Desserts",
+    "description": "Roasted golden kataifi kunafa pastry layered with rich pistachio cream and milk chocolate.",
+    "price": 179,
+    "available": true,
+    "sort_order": 46
+  },
+  {
+    "id": "egyptian-desserts-1-0",
+    "name": "Hazelnut",
+    "category": "Egyptian Desserts",
+    "description": "Velvety dessert cup layered with smooth hazelnut chocolate cream and crispy wafer.",
+    "price": 179,
+    "available": true,
+    "sort_order": 47
+  },
+  {
+    "id": "egyptian-desserts-2-0",
+    "name": "Milk Choco",
+    "category": "Egyptian Desserts",
+    "description": "Creamy Belgian milk chocolate dessert with a silky smooth, decadent finish.",
+    "price": 179,
+    "available": true,
+    "sort_order": 48
+  },
+  {
+    "id": "egyptian-desserts-3-0",
+    "name": "Half & Half",
+    "category": "Egyptian Desserts",
+    "description": "The best of both worlds — layered milk chocolate and rich white cream.",
+    "price": 179,
+    "available": true,
+    "sort_order": 49
+  },
+  {
+    "id": "egyptian-desserts-4-0",
+    "name": "Kinder Bueno",
+    "category": "Egyptian Desserts",
+    "description": "Layered white chocolate cream, roasted hazelnut wafer crunch and cocoa drizzle.",
+    "price": 179,
+    "available": true,
+    "sort_order": 50
+  }
+]

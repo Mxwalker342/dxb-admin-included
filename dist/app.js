@@ -1,3 +1,4 @@
+import { api, configured } from './db.js';
 // Mobile navigation toggle
 const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.menu-toggle');
@@ -259,7 +260,7 @@ function renderMenu() {
         <p>${description}</p>
         <div class="card-footer">
           <span class="item-price">${money(price)}</span>
-          <span class="card-star" aria-hidden="true">✳</span>
+          <a class="card-cta" href="/order.html?category=${encodeURIComponent(c.label)}">Order +</a>
         </div>
       </article>
     `).join('');
@@ -401,4 +402,21 @@ if (dialog) {
   dialog.addEventListener('close', () => {
     document.body.style.overflow = '';
   });
+}
+
+// Keep displayed prices in step with the staff-managed live catalogue.
+if (configured) {
+  api('/rest/v1/menu_items?select=id,price&order=sort_order.asc').then(rows => {
+    for (const category of categories) category.items.forEach((item,index) => {
+      const variants = rows.filter(row => row.id.startsWith(category.id + '-' + index + '-'));
+      variants.sort((a,b) => Number(a.id.split('-').at(-1)) - Number(b.id.split('-').at(-1)));
+      if (variants.length) item[1] = variants.length === 1 ? variants[0].price : variants.map(v => v.price).join(' / ');
+    });
+    renderMenu();
+    document.querySelectorAll('.food-card').forEach((card,index) => {
+      const f = featured[index];
+      const item = categories.find(c => c.id === f[6])?.items.find(i => i[0] === f[0] && (f[7] === 'all' || i[3] === f[7]));
+      if (item) card.querySelector('.food-price').textContent = money(item[1]);
+    });
+  }).catch(() => {});
 }

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
-  <script src="/app.js" defer></script>
+  <script type="module" src="/app.js"></script>
   <script src="/arcade-game.js" defer></script>
 </head>
 <body>
@@ -32,7 +32,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#visit">Visit</a>
       </nav>
-      <a class="nav-cta" href="#menu">Find your favorite <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="/order.html">Order / Reserve <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -47,7 +47,7 @@
         <h1 id="hero-title">ONE BYTE.<br>ZERO <span class="outline">REGRETS.</span></h1>
         <p>Crispy edges. Melty cheese. Zero shortcuts.<br>Loaded burgers, refreshing drinks, and your new favorite hangout.</p>
         <div class="hero-cta-group">
-          <a href="#menu" class="button">Meet the burgers <span aria-hidden="true">↗</span></a>
+          <a href="/order.html" class="button">Order ahead <span aria-hidden="true">↗</span></a>
           <a href="#gaming" class="button button-outline">Gaming zone <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-note">
@@ -390,7 +390,7 @@
     </div>
     <a class="back-top" href="#main" aria-label="Back to top">↑</a>
     <small>© 2026 dxb cafe. All good vibes reserved. Smashed fresh, stacked high.</small>
-  </footer>
+  <p style="text-align:center;padding:16px"><a href="/order.html">Preorder / reserve a table</a> · <a href="/admin.html">Staff login</a></p></footer>
 
   <!-- Lightbox Modal -->
   <dialog id="image-dialog" class="image-dialog">
